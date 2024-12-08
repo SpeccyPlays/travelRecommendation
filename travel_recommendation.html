@@ -13,7 +13,14 @@
         background-attachment: fixed;
         background-size: 100% 100%;
         text-align: center;
-        width: 100%;
+        width: 95%;
+        color: white;
+        text-shadow: 1px 1px 0 grey, -1px 1px 0 grey, -1px -1px 0 grey,
+          1px -1px 0 grey;
+      }
+      a {
+        padding: 10px;
+        color: white;
       }
       .content {
         display: none;
@@ -23,6 +30,10 @@
       }
       #searchbar {
         display: block;
+        padding: 10px;
+      }
+      .addpadding {
+        padding-bottom: 10px;
       }
     </style>
     <script src="./travel_recommendation.js"></script>
@@ -55,12 +66,18 @@
       <h2>Contact us</h2>
       <form id="contactusform">
         <div><label for="name">Name</label></div>
-        <div><input type="text" id="name" name="name" /></div>
+        <div class="addpadding">
+          <input type="text" id="name" name="name" />
+        </div>
         <div><label for="email">Email</label></div>
-        <div><input type="text" id="email" name="email" /></div>
+        <div class="addpadding">
+          <input type="text" id="email" name="email" />
+        </div>
         <div><label for="message">Message</label></div>
-        <div><textarea id="message" name="message"></textarea></div>
-        <div><button type="submit">Submit</button></div>
+        <div class="addpadding">
+          <textarea id="message" name="message"></textarea>
+        </div>
+        <div class="addpadding"><button type="submit">Submit</button></div>
       </form>
     </div>
   </body>
