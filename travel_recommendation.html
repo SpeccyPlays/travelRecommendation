@@ -35,6 +35,14 @@
       .addpadding {
         padding-bottom: 10px;
       }
+      .ourteam {
+        text-align: center;
+      }
+      ul {
+        display: inline-block;
+        text-align: left;
+        list-style-type: none;
+      }
     </style>
     <script src="./travel_recommendation.js"></script>
   </head>
@@ -57,9 +65,27 @@
     </div>
     <div id="aboutus" class="content">
       <h2>About us</h2>
-      <p>Blurb about company</p>
+      <p>
+        Welcome to the Travel Recommendations company. We provide
+        recommendations based on <strong>your</strong> input
+      </p>
       <div class="ourteam">
         <h3>Our team</h3>
+        <ul>
+          <li><h4>John Smith</h4></li>
+          <li>CEO</li>
+          <li>John has a real passion for travel</li>
+        </ul>
+        <ul>
+          <li><h4>Bob Jones</h4></li>
+          <li>CFO</li>
+          <li>Bob is always keen to save you a dollar</li>
+        </ul>
+        <ul>
+          <li><h4>Alex Roberts</h4></li>
+          <li>Staff</li>
+          <li>Alex is the one doing all the hard work</li>
+        </ul>
       </div>
     </div>
     <div id="contactus" class="content">
@@ -79,6 +105,11 @@
         </div>
         <div class="addpadding"><button type="submit">Submit</button></div>
       </form>
+    </div>
+    <div class="searchresults content">
+    </div>
+    <div class="errormsg content">
+      <h3>Sorry, we cannot find any recommendations based on your search values</h3>
     </div>
   </body>
 </html>
