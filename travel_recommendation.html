@@ -43,6 +43,10 @@
         text-align: left;
         list-style-type: none;
       }
+      img {
+        max-width: 200px;
+        max-height: 200px;
+      }
     </style>
     <script src="./travel_recommendation.js"></script>
   </head>
@@ -52,10 +56,10 @@
       <a class="navlink" href="#" data-target="aboutus">About us</a>
       <a class="navlink" href="#" data-target="contactus">Contact us</a>
       <div id="searchbar">
-        <form id="search">
-          <input type="text" placeholder="Search.." name="search" />
-          <button type="submit">Search</button>
-          <button type="submit">Clear</button>
+        <form>
+          <input type="text" placeholder="Search.." name="search" id="search" />
+          <button type="submit" id="searchbutton">Search</button>
+          <button type="submit" id="clearbutton">Clear</button>
         </form>
       </div>
     </div>
@@ -106,10 +110,11 @@
         <div class="addpadding"><button type="submit">Submit</button></div>
       </form>
     </div>
-    <div class="searchresults content">
-    </div>
+    <div class="searchresults content"></div>
     <div class="errormsg content">
-      <h3>Sorry, we cannot find any recommendations based on your search values</h3>
+      <h3>
+        Sorry, we cannot find any recommendations based on your search values
+      </h3>
     </div>
   </body>
 </html>
