@@ -1,10 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta http-equiv="refresh" content="0; url=travel_recommendation.html">
-    <title>Redirecting to travel recommendation site...</title>
-</head>
-<body>
-    <p>If you are not redirected automatically, <a href="travel_recommendation.html">click here</a>.</p>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Travel Recommendations</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <style>
+      body {
+        background-image: url("background.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        text-align: center;
+        width: 95%;
+        color: white;
+        text-shadow: 1px 1px 0 grey, -1px 1px 0 grey, -1px -1px 0 grey,
+          1px -1px 0 grey;
+      }
+      a {
+        padding: 10px;
+        color: white;
+      }
+      .content {
+        display: none;
+      }
+      .active {
+        display: block;
+      }
+      #searchbar {
+        display: block;
+        padding: 10px;
+      }
+      .addpadding {
+        padding-bottom: 10px;
+      }
+      .ourteam {
+        text-align: center;
+      }
+      ul {
+        display: inline-block;
+        text-align: left;
+        list-style-type: none;
+      }
+      img {
+        max-width: 200px;
+        max-height: 200px;
+      }
+    </style>
+    <script src="./travel_recommendation.js"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <a class="navlink" href="#" data-target="home">Home</a>
+      <a class="navlink" href="#" data-target="aboutus">About us</a>
+      <a class="navlink" href="#" data-target="contactus">Contact us</a>
+      <div id="searchbar">
+        <form>
+          <input type="text" placeholder="Search.." name="search" id="search" />
+          <button type="submit" id="searchbutton">Search</button>
+          <button onclick="clearButton()" id="clearbutton">Clear</button>
+        </form>
+      </div>
+    </div>
+    <div id="home" class="content active">
+      <h2>Welcome to the travel recommendations website</h2>
+      <p>Explore destinations and plan your adventure</p>
+    </div>
+    <div id="aboutus" class="content">
+      <h2>About us</h2>
+      <p>
+        Welcome to the Travel Recommendations company. We provide
+        recommendations based on <strong>your</strong> input
+      </p>
+      <div class="ourteam">
+        <h3>Our team</h3>
+        <ul>
+          <li><h4>John Smith</h4></li>
+          <li>CEO</li>
+          <li>John has a real passion for travel</li>
+        </ul>
+        <ul>
+          <li><h4>Bob Jones</h4></li>
+          <li>CFO</li>
+          <li>Bob is always keen to save you a dollar</li>
+        </ul>
+        <ul>
+          <li><h4>Alex Roberts</h4></li>
+          <li>Staff</li>
+          <li>Alex is the one doing all the hard work</li>
+        </ul>
+      </div>
+    </div>
+    <div id="contactus" class="content">
+      <h2>Contact us</h2>
+      <form id="contactusform">
+        <div><label for="name">Name</label></div>
+        <div class="addpadding">
+          <input type="text" id="name" name="name" />
+        </div>
+        <div><label for="email">Email</label></div>
+        <div class="addpadding">
+          <input type="text" id="email" name="email" />
+        </div>
+        <div><label for="message">Message</label></div>
+        <div class="addpadding">
+          <textarea id="message" name="message"></textarea>
+        </div>
+        <div class="addpadding"><button type="submit">Submit</button></div>
+      </form>
+    </div>
+    <div class="searchresults content"></div>
+    <div class="errormsg content">
+      <h3>
+        Sorry, we cannot find any recommendations based on your search values
+      </h3>
+    </div>
+  </body>
 </html>
