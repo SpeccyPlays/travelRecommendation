@@ -118,3 +118,13 @@ function addData(resultDiv, info) {
   description.textContent = info.description;
   resultDiv.appendChild(description);
 }
+function clearButton(){
+    //clear everything and go back to home page
+    const sections = document.querySelectorAll(".content");
+    sections.forEach((section) => section.classList.remove("active"));
+    const searchResults = document.querySelector(".searchresults");
+        //remove any data already in search results
+        searchResults.replaceChildren();
+        document.getElementById("home").classList.add("active");
+        document.querySelector("#search").value = "";
+}
